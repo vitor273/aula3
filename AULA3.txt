@@ -1,4 +1,5 @@
 EXERCISEO 1
+
 using static System.Console;
 int ano = 2024;
 
@@ -12,7 +13,7 @@ else
     WriteLine($"{ano} nao e bisexto");
 }
 ReadLine();
-
+-----------------------------------------------------------------------------
 EXERCISEO 2
 
 double n1, n2, resultado;
@@ -44,3 +45,71 @@ switch (operaçao)
         WriteLine($"o resultado foi {resultado:F2}");
         break;
 }
+-----------------------------------------------------------------------------
+EXERCISEO 3
+
+using static System.Console;
+
+int N1 = 10 ,n2 = 13, n3 = 20, MAIOR;
+    if (N1 > n2 && N1 >n3)
+	{
+    MAIOR = N1;
+}
+else if (n2 > N1 && n2 > n3)
+{
+    MAIOR = n2;
+}
+else
+{
+    MAIOR = n3;
+}
+
+WriteLine($"o maior numero e {MAIOR}");
+
+-----------------------------------------------------------------------------
+EXERCISEO 4
+
+
+int N1 = 14 ,n2 = 50, n3 = 20, MAIOR;
+    if (N1 + n2 > n3 && N1 + n3 > n2)
+	{
+    WriteLine($"os lados forman um triangulo valido");
+}
+else
+{
+    WriteLine($"os lados nao forman um triangulo valido");
+}
+
+ReadLine();
+
+-----------------------------------------------------------------------------
+EXERCISEO 5
+
+double nota = 7;
+string conceito;
+
+switch (nota)
+
+{
+	case 10:
+	case 9:
+		conceito = "a";
+		break;
+
+        case 8.9:
+	case 7:
+        conceito = "b";
+        break;
+
+
+           case 6.9:
+	case 5:
+        conceito = "c";
+        break;
+
+            case 4.9:
+	case 0:
+        conceito = "d";
+        break;
+}
+WriteLine($"Nota: {nota} " );
