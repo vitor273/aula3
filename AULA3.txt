@@ -1,0 +1,46 @@
+EXERCISEO 1
+using static System.Console;
+int ano = 2024;
+
+if ((ano % 4 == 0 && ano % 100 == 0) || ano % 400 == 0)
+   
+
+    WriteLine($"{ano} e bisexto");
+
+else
+{
+    WriteLine($"{ano} nao e bisexto");
+}
+ReadLine();
+
+EXERCISEO 2
+
+double n1, n2, resultado;
+char operaçao;
+
+WriteLine("calculadora");
+WriteLine("digite o 1 valor");
+n1 = Convert.ToDouble(ReadLine());
+WriteLine("digite o 2 valor");
+n2 = Convert.ToDouble(ReadLine());
+operaçao = Convert.ToChar(ReadLine());
+
+switch (operaçao)
+{
+    case '1':
+        resultado = n1 + n2;
+        WriteLine($"o resultado foi {resultado:F2}");
+        break;
+    case '2':
+        resultado = n1 - n2;
+        WriteLine($"o resultado foi {resultado:F2}");
+        break;
+    case '3':
+        resultado = n1 * n2;
+        WriteLine($"o resultado foi {resultado:F2}");
+        break;
+    case '4':
+        resultado = n1 / n2;
+        WriteLine($"o resultado foi {resultado:F2}");
+        break;
+}
