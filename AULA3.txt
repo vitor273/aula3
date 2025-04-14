@@ -113,3 +113,82 @@ switch (nota)
         break;
 }
 WriteLine($"Nota: {nota} " );
+
+
+using static System.Console;
+List<int> numberList = new List<int>();
+numberList.Add(23);
+numberList.Add(34);
+numberList.Add(73);
+foreach (var item in numberList)
+{
+    WriteLine(item);
+}
+ReadKey();
+
+
+using static System.Console;
+
+List<int> numberList = new List<int>();
+numberList.Add(23);
+numberList.Add(34);
+numberList.Add(73);
+numberList.Insert(3, 600000);
+numberList.Add(90);
+numberList.Sort();
+foreach (var item in numberList)
+{
+    WriteLine(item);
+}
+WriteLine("2 elemento da Lista:" + numberList[1].ToString());
+WriteLine("numero de elemento na Lista:" + numberList.Count());
+WriteLine("capacidade da minha lista" + numberList.Capacity);
+numberList.Remove(90);
+numberList.Remove(0);
+numberList.Reverse();
+
+foreach (var item in numberList)
+{
+    WriteLine(item);
+}
+WriteLine("elemento da posiçao 0:" + numberList[0]);
+int number = numberList.IndexOf(1000);
+if (number >= 0)
+{
+    WriteLine("o numero encomtrado esta na posiçao :" + number);
+}
+else
+{
+    WriteLine("elemento nao encontrado");
+}
+foreach (var item in numberList)
+{
+    WriteLine(item);
+}
+foreach (var item in numberList)
+{
+    WriteLine(item);
+}
+numberList.Sort();
+foreach (var item in numberList)
+{
+    WriteLine(item);
+}
+foreach (var item in numberList)
+{
+    WriteLine(item);
+}
+foreach (var item in numberList)
+{
+    WriteLine(item);
+}
+foreach (var item in numberList)
+{
+    WriteLine(item);
+}
+foreach (var item in numberList)
+{
+    WriteLine(item);
+}
+
+ReadKey();
