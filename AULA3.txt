@@ -272,16 +272,17 @@ List<string> n = new List<string> { "ana", "beatriz", "camila","daniela","elisa"
 
 for (int i = 0; i < n.Count; i++)
 {
-    WriteLine(n[i]);
-        if (idade[i] >= 18 && idade[i] <= 20)
-        {
-           boa.Add(n[i]);
-        }
+    WriteLine($"Nome: {n[i]} - Idade: {idade[i]}"); 
+    if (idade[i] >= 18 && idade[i] <= 20)
+    {
+        boa.Add(n[i]);
+       
+    }
 }
-WriteLine(" ==================  ================== CANDIDATAS  ================== ==================");
+WriteLine(" ==================  ================== CANDIDATAS  ================== ================== ");
 
-foreach (var item in boa)
+for (int i = 0; i < boa.Count; i++)
 {
-    WriteLine(item);
+    WriteLine($"Nome: {boa[i]}");
 }
 ReadKey();
