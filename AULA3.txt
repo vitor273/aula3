@@ -321,6 +321,38 @@ WriteLine($"V1 e V2 possuem {numero} valore idênticos");
 ReadKey();
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+EXERCISEO4
 
+using static System.Console;
+int b = 0;
+bool c = false;
+List<double> a = new List<double>();
 
+for (int i = 0; i < 15; i++)
+{
+    Write($"Digite a nota do {i + 1}º Aluno(a):");
+    a.Add(Convert.ToDouble(ReadLine()));
 
+    foreach (var item in a)
+    {
+        if (item >= 7)
+        {
+            b++;
+            
+        }
+        c = item >= 5 ? true : false;
+        
+        
+    }
+}
+for (int i = 0; i < a.Count; i++)
+{
+    WriteLine($"notas {a[i]}");
+}
+WriteLine("____________________________________________");
+WriteLine( c?$"{b} alunos estão com a média acima de 7.0!" : "Nenhum aluno(a) tirou nota acima de 5.0!");
+
+ReadKey();
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+EXERCISEO5
