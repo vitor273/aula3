@@ -230,31 +230,31 @@ List<int> idade = new List<int>{ 10, 20, 12, 14, 15, 16, 17,
              18, 11, 19 };
 List<string> n = new List<string> { "Ana", "Bruno", "Carlos", "Daniela", "Eduardo", "Fernanda", "Gustavo",
              "Helena", "Igor", "Juliana" };
-for (int i = 1; i < n.Count; i++)
+for (int i = 0; i < 10; i++)
 {
-WriteLine(n[i]);
+    WriteLine(n[i]);
     for (int j = i + 1; j < idade.Count; j++)
-        if (idade[i] > idade[j]) 
-    {
+        if (idade[i] > idade[j])
+        {
             int t = idade[i];
             idade[i] = idade[j];
             idade[j] = t;
-
             string Nome = n[i];
             n[i] = n[j];
             n[j] = Nome;
         }
 }
 WriteLine(" idadedos estudantes");
-for (int i = 0; i < n.Count; i++)
+for (int i = 0; i < 10; i++)
 {
     WriteLine($"{n[i]} - {idade[i]} anos");
 }
 
 WriteLine($"Mais novo: {n[0]} ({idade[0]} anos)");
-WriteLine($"Mais velho: {n.Count - 1} {idade.Count - 1} anos)");
+WriteLine($"Mais velho: {n[9]} {idade[9]} anos)");
+ReadKey()
 
-ReadKey();
+
 
 exerciseo3
 
