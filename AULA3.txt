@@ -226,33 +226,29 @@ ReadKey();
 EXERCISEO1
 
 using static System.Console;
-List<int> idade = new List<int>{ 10, 20, 12, 14, 15, 16, 17,
-             18, 11, 19 };
-List<string> n = new List<string> { "Ana", "Bruno", "Carlos", "Daniela", "Eduardo", "Fernanda", "Gustavo",
-             "Helena", "Igor", "Juliana" };
+List<string> n = new List<string>();
+List<int> a = new List<int>();
+int media = 0;
 for (int i = 0; i < 10; i++)
+   
 {
-    WriteLine(n[i]);
-    for (int j = i + 1; j < idade.Count; j++)
-        if (idade[i] > idade[j])
-        {
-            int t = idade[i];
-            idade[i] = idade[j];
-            idade[j] = t;
-            string Nome = n[i];
-            n[i] = n[j];
-            n[j] = Nome;
-        }
-}
-WriteLine(" idadedos estudantes");
-for (int i = 0; i < 10; i++)
-{
-    WriteLine($"{n[i]} - {idade[i]} anos");
+
+    WriteLine($"digite o {i + 1} nome");
+    n.Add(ReadLine());
+    WriteLine("digite a nota:");
+    a.Add(Convert.ToInt32(ReadLine()));
+    media += a[i];
 }
 
-WriteLine($"Mais novo: {n[0]} ({idade[0]} anos)");
-WriteLine($"Mais velho: {n[9]} {idade[9]} anos)");
-ReadKey()
+
+WriteLine("Notas:");
+media = media / 10;
+WriteLine($"A média da turma de TDS é :{media}");
+for (int i = 0; i <10; i++)
+{
+    WriteLine($"{n[i]} Nota: {a[i]}");
+}
+ReadKey();
 
 
 
