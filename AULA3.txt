@@ -240,30 +240,7 @@ ReadKey();
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 EXERCISEO2
 
-using static System.Console;
-List<string> n = new List<string>();
-List<int> a = new List<int>();
-int media = 0;
-for (int i = 0; i < 10; i++)
-   
-{
 
-    WriteLine($"digite o {i + 1} nome");
-    n.Add(ReadLine());
-    WriteLine("digite a nota:");
-    a.Add(Convert.ToInt32(ReadLine()));
-    media += a[i];
-}
-
-
-WriteLine("Notas:");
-media = media / 10;
-WriteLine($"A média da turma de TDS é :{media}");
-for (int i = 0; i <10; i++)
-{
-    WriteLine($"{n[i]} Nota: {a[i]}");
-}
-ReadKey();
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -321,7 +298,7 @@ WriteLine($"V1 e V2 possuem {numero} valore idênticos");
 ReadKey();
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-EXERCISEO4
+EXERCISEO5
 
 using static System.Console;
 int b = 0;
@@ -355,4 +332,38 @@ WriteLine( c?$"{b} alunos estão com a média acima de 7.0!" : "Nenhum aluno(a) 
 ReadKey();
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-EXERCISEO5
+EXERCISEO6
+
+using System.Text.Json.Serialization;
+using static System.Console;
+
+List<double> a = new List<double> {};
+double MelhorTempo, M = 0;
+int V = 0;
+
+for (int i = 0; i < 12; i++)
+{
+    Write($"Digite o tempo da {i + 1}º Volta: ");
+    a.Add(Convert.ToDouble(ReadLine()));
+}
+MelhorTempo = a[0];
+for (int i = 0; i < 12; i++)
+{
+	if (a[i] < MelhorTempo)
+	{
+		MelhorTempo = a[i];
+		V = i;
+	}
+	M += a[i]; 
+}
+for (int i = 0; i < a.Count; i++)
+{
+    WriteLine($"Voltas: {a[i]}");
+}
+M = M / 12;
+
+WriteLine($"O maior tempo {MelhorTempo:F2}");
+WriteLine($"a volta em que o melhor tempo ocorreu foi: {V}");
+WriteLine($"Media: {M}");
+
+ReadLine();
