@@ -255,4 +255,33 @@ WriteLine($"Mais novo: {n[0]} ({idade[0]} anos)");
 WriteLine($"Mais velho: {n.Count - 1} {idade.Count - 1} anos)");
 
 ReadKey();
-   
+
+exerciseo3
+
+using static System.Console;
+List<int> idade = new List<int>{ 17, 18, 20, 22, 19, 21, 18, 17, 20, 19,
+            16, 18, 20, 23, 19, 18, 17, 21, 20, 18};
+List<string> boa = new List<string>();
+List<string> n = new List<string> { "ana", "beatriz", "camila","daniela","elisa","fernanda","gabriela","helena", "isadora", "julia", "karina",
+    "larissa",
+    "mariana",
+    "natalia",
+    "olivia",
+    "patricia",
+    "rafaela" };
+
+for (int i = 0; i < n.Count; i++)
+{
+    WriteLine(n[i]);
+        if (idade[i] >= 18 && idade[i] <= 20)
+        {
+           boa.Add(n[i]);
+        }
+}
+WriteLine(" ==================  ================== CANDIDATAS  ================== ==================");
+
+foreach (var item in boa)
+{
+    WriteLine(item);
+}
+ReadKey();
